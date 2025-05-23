@@ -157,25 +157,20 @@ Now, after 20+ seasons, I’m still competing at the highest level. I’ve becom
   Your browser does not support the audio element.
 </audio>
 
-<button
-  onclick="toggleAudio()"
-  style="position: fixed; bottom: 60px !important; left: 20px !important; z-index: 9999 !important; padding: 10px 15px; background: #EB0E0E; color: white; border: none; border-radius: 5px; cursor: pointer;">
-  Play/Pause King's Music
-</button>
+<!-- Music Controls: Play/Pause + Volume Slider -->
+<div style="position: fixed; bottom: 100px; left: 20px; z-index: 9999; color: white;">
+  <!-- Play/Pause Button -->
+  <button onclick="toggleAudio()" style="padding: 10px 15px; background: #EB0E0E; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Play/Pause King's Music
+  </button>
 
-<label for="volumeControl" style="position: fixed; bottom: 20px !important; left: 130px !important; z-index: 9999 !important; color: white;">
-  Volume
-</label>
-
-<input
-  type="range"
-  id="volumeControl"
-  min="0"
-  max="1"
-  step="0.01"
-  value="0.5"
-  style="position: fixed; bottom: 20px !important; left: 180px !important; z-index: 9999 !important;"
-/>
+  <!-- Volume Slider Below -->
+  <div style="margin-top: 10px;">
+    <label for="volumeControl">Volume</label><br />
+    <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" />
+    <span id="volumeValue">0.5</span>
+  </div>
+</div>
                 
 <script>
   const audio = document.getElementById('bgAudio');
