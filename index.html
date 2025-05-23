@@ -170,12 +170,24 @@ Now, after 20+ seasons, I’m still competing at the highest level. I’ve becom
 </div>
 
 <audio id="bgAudio" loop>
-  <source src="assets/my-song.mp3" type="audio/mpeg">
+  <source src="assets/my-song.mp3" type="audio/mpeg" />
   Your browser does not support the audio element.
 </audio>
 
+<!-- Audio Controls Container -->
+<div id="audioControls" style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; color: white;">
+  <button onclick="toggleAudio()" style="padding: 10px 15px; background: #EB0E0E; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Play/Pause King's Music
+  </button>
+  <div style="margin-top: 10px;">
+    <label for="volumeControl">Volume</label><br />
+    <input type="range" id="volumeControl" min="0" max="100" step="1" value="50" />
+    <span id="volumeValue">50</span>
+  </div>
+</div>
+
 <script>
- const audio = document.getElementById('bgAudio');
+  const audio = document.getElementById('bgAudio');
   const volumeControl = document.getElementById('volumeControl');
   const volumeValue = document.getElementById('volumeValue');
   const audioControls = document.getElementById('audioControls');
@@ -199,6 +211,7 @@ Now, after 20+ seasons, I’m still competing at the highest level. I’ve becom
       audio.play().catch(() => {});
     }
   }, { once: true });
+
 
   function hideAudioControls() {
     audioControls.style.display = 'none';
