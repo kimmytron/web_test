@@ -94,4 +94,21 @@ https://github.com/ndoherty-xyz/unemployables-portfolio-template
 
 https://roboticenergyllc.com
 
+Danecarbaugh, and Dane Delgado. “This Tattoo of the Famous Dwyane Wade and Lebron Alley-Oop Is Incredible (Photo).” NBC Sports, NBC Sports, 14 June 2018, www.nbcsports.com/nba/news/this-tattoo-of-the-famous-dwyane-wade-and-lebron-alley-oop-is-incredible-photo.
+
+“Lebron James Becomes First Player to 50,000 Points.” HoopsHype, HoopsHype, 5 Mar. 2025, hoopshype.com/2025/03/04/lebron-james-becomes-first-player-to-50000-points/.
+
+“Lebron James: Forward: Los Angeles Lakers.” NBA, www.nba.com/player/2544/lebron-james. Accessed 22 May 2025.
+R/Lakers on Reddit: All I’m Asking for Is 1 More Prime 2018 Lebron Game. That’s It LBJ. Let’s End This Today., 
+
+www.reddit.com/r/lakers/comments/13fgc8g/all_im_asking_for_is_1_more_prime_2018_lebron/. Accessed 23 May 2025.
+
+Withers, Tom. “Lebron James Brings Title Home to Cleveland.” Press Herald, 20 June 2016, www.pressherald.com/2016/06/20/lebron-james-brings-title-home-to-cleveland/.
+
+Song
+http://youtube.com/watch?v=fGbIrmC-L9o
+	
+ ChatGPT 
+ the play button and volume bar
+
 
