@@ -173,6 +173,59 @@ Now, after 20+ seasons, I’m still competing at the highest level. I’ve becom
       audio.pause();
     }
   }
+    <audio id="bgAudio" loop>
+  <source src="assets/my-song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Controls container fixed at bottom left -->
+<div style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.5); padding: 8px 12px; border-radius: 5px;">
+  <button id="playPauseBtn" style="padding: 10px 15px; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Play/Pause Music
+  </button>
+  <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5" style="cursor: pointer;">
+</div>
+
+<script>
+  const audio = document.getElementById('bgAudio');
+  const playPauseBtn = document.getElementById('playPauseBtn');
+  const volumeSlider = document.getElementById('volumeSlider');
+
+  // Set initial volume to 50%
+  audio.volume = 0.5;
+
+  // Play/pause toggle
+  playPauseBtn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      playPauseBtn.textContent = 'Pause Music';
+    } else {
+      audio.pause();
+      playPauseBtn.textContent = 'Play Music';
+    }
+  });
+
+  // Update button text on play/pause via other means (optional)
+  audio.addEventListener('play', () => {
+    playPauseBtn.textContent = 'Pause Music';
+  });
+  audio.addEventListener('pause', () => {
+    playPauseBtn.textContent = 'Play Music';
+  });
+
+  // Volume slider control
+  volumeSlider.addEventListener('input', () => {
+    audio.volume = volumeSlider.value;
+  });
+
+  // Allow autoplay after first user interaction (optional)
+  document.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play().catch(() => {});
+    }
+  }, { once: true });
+</script>
+
 </script>
 
 </body>
