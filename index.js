@@ -1,109 +1,84 @@
-function hideAudioControls() {
-    $("#audioControls").hide();
-}
-
-function showAudioControls() {
-    $("#audioControls").show();
-}
-
 function showprojects(){
-    const el = $("#projects_container");
-    el.removeClass("animated slideInDown slideOutUp").css("display", "block");
-    void el[0].offsetWidth;
-    el.addClass("animated slideInDown");
-    hideAudioControls();
-    setTimeout(() => {
-        el.removeClass("animated slideInDown");
-    }, 800);
+    $("#projects_container").css("display","inherit");
+    $("#projects_container").removeClass("animated slideInDown");
+    void $("#projects_container")[0].offsetWidth;
+    $("#projects_container").addClass("animated slideInDown");
+    setTimeout(function(){
+        $("#projects_container").removeClass("animated slideInDown");
+    },800);
 }
 
 function closeprojects(){
-    const el = $("#projects_container");
-    el.removeClass("animated slideInDown slideOutUp");
-    el.addClass("animated slideOutUp");
-    setTimeout(() => {
-        el.removeClass("animated slideOutUp");
-        el.css("display", "none");
-        showAudioControls();
-    }, 800);
+    $("#projects_container").addClass("animated slideOutUp");
+    setTimeout(function(){
+        $("#projects_container").removeClass("animated slideOutUp");
+        $("#projects_container").css("display","none");
+    },800);
 }
 
 function showabout(){
-    const el = $("#about_container");
-    el.removeClass("animated slideInLeft slideOutLeft").css("display", "block");
-    void el[0].offsetWidth;
-    el.addClass("animated slideInLeft");
-    hideAudioControls();
-    setTimeout(() => {
-        el.removeClass("animated slideInLeft");
-    }, 800);
+    $("#about_container").css("display","inherit");
+    $("#about_container").removeClass("animated slideInLeft");
+    void $("#about_container")[0].offsetWidth;
+    $("#about_container").addClass("animated slideInLeft");
+    setTimeout(function(){
+        $("#about_container").removeClass("animated slideInLeft");
+    },800);
 }
 
 function closeabout(){
-    const el = $("#about_container");
-    el.removeClass("animated slideInLeft slideOutLeft");
-    el.addClass("animated slideOutLeft");
-    setTimeout(() => {
-        el.removeClass("animated slideOutLeft");
-        el.css("display", "none");
-        showAudioControls();
-    }, 800);
+    $("#about_container").addClass("animated slideOutLeft");
+    setTimeout(function(){
+        $("#about_container").removeClass("animated slideOutLeft");
+        $("#about_container").css("display","none");
+    },800);
 }
 
 function showwork(){
-    const el = $("#work_container");
-    el.removeClass("animated slideInRight slideOutRight").css("display", "block");
-    void el[0].offsetWidth;
-    el.addClass("animated slideInRight");
-    hideAudioControls();
-    setTimeout(() => {
-        el.removeClass("animated slideInRight");
-    }, 800);
+    $("#work_container").css("display","inherit");
+    $("#work_container").removeClass("animated slideInRight");
+    void $("#work_container")[0].offsetWidth;
+    $("#work_container").addClass("animated slideInRight");
+    setTimeout(function(){
+        $("#work_container").removeClass("animated slideInRight");
+    },800);
 }
 
 function closework(){
-    const el = $("#work_container");
-    el.removeClass("animated slideInRight slideOutRight");
-    el.addClass("animated slideOutRight");
-    setTimeout(() => {
-        el.removeClass("animated slideOutRight");
-        el.css("display", "none");
-        showAudioControls();
-    }, 800);
+    $("#work_container").addClass("animated slideOutRight");
+    setTimeout(function(){
+        $("#work_container").removeClass("animated slideOutRight");
+        $("#work_container").css("display","none");
+    },800);
 }
 
 function showcontact(){
-    const el = $("#contact_container");
-    el.removeClass("animated slideInUp slideOutDown").css("display", "block");
-    void el[0].offsetWidth;
-    el.addClass("animated slideInUp");
-    hideAudioControls();
-    setTimeout(() => {
-        el.removeClass("animated slideInUp");
-    }, 800);
+    $("#contact_container").css("display","inherit");
+    $("#contact_container").removeClass("animated slideInUp");
+    void $("#contact_container")[0].offsetWidth;
+    $("#contact_container").addClass("animated slideInUp");
+    setTimeout(function(){
+        $("#contact_container").removeClass("animated slideInUp");
+    },800);
 }
 
 function closecontact(){
-    const el = $("#contact_container");
-    el.removeClass("animated slideInUp slideOutDown");
-    el.addClass("animated slideOutDown");
-    setTimeout(() => {
-        el.removeClass("animated slideOutDown");
-        el.css("display", "none");
-        showAudioControls();
-    }, 800);
+    $("#contact_container").addClass("animated slideOutDown");
+    setTimeout(function(){
+        $("#contact_container").removeClass("animated slideOutDown");
+        $("#contact_container").css("display","none");
+    },800);
 }
 
-setTimeout(() => {
-    const loading = $("#loading");
-    loading.addClass("animated fadeOut");
-    setTimeout(() => {
-        loading.removeClass("animated fadeOut");
-        loading.css("display", "none");
-        $("#box").css("display", "none");
-        $("#projects").removeClass("animated fadeIn");
-        $("#about").removeClass("animated fadeIn");
-        $("#contact").removeClass("animated fadeIn");
-        $("#work").removeClass("animated fadeIn");
-    }, 1000);
-}, 1500);
+setTimeout(function(){
+    $("#loading").addClass("animated fadeOut");
+    setTimeout(function(){
+      $("#loading").removeClass("animated fadeOut");
+      $("#loading").css("display","none");
+      $("#box").css("display","none");
+      $("#projects").removeClass("animated fadeIn");
+      $("#about").removeClass("animated fadeIn");
+      $("#contact").removeClass("animated fadeIn");
+      $("#work").removeClass("animated fadeIn");
+    },1000);
+},1500);
