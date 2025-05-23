@@ -157,8 +157,8 @@ Now, after 20+ seasons, I’m still competing at the highest level. I’ve becom
   Your browser does not support the audio element.
 </audio>
 
-<!-- Audio Controls: Bottom Left -->
-<div style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; color: white;">
+<!-- Audio Controls Container -->
+<div id="audioControls" style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; color: white;">
   <!-- Play/Pause Button -->
   <button onclick="toggleAudio()" style="padding: 10px 15px; background: #EB0E0E; color: white; border: none; border-radius: 5px; cursor: pointer;">
     Play/Pause King's Music
@@ -178,9 +178,11 @@ Now, after 20+ seasons, I’m still competing at the highest level. I’ve becom
 </audio>
 
 <script>
+<script>
   const audio = document.getElementById('bgAudio');
   const volumeControl = document.getElementById('volumeControl');
   const volumeValue = document.getElementById('volumeValue');
+  const audioControls = document.getElementById('audioControls');
 
   function toggleAudio() {
     if (audio.paused) {
@@ -202,19 +204,52 @@ Now, after 20+ seasons, I’m still competing at the highest level. I’ve becom
     }
   }, { once: true });
 
-
-  function toggleAudio() {
-    if (audio.paused) {
-      audio.play();
-    } else {
-      audio.pause();
-    }
+  // Utility to hide audio controls
+  function hideAudioControls() {
+    audioControls.style.display = 'none';
   }
-   volumeControl.addEventListener('input', function () {
-  const value = parseInt(this.value, 10);
-  audio.volume = value / 100;
-  volumeValue.textContent = value;
-});
+
+  // Utility to show audio controls
+  function showAudioControls() {
+    audioControls.style.display = 'block';
+  }
+
+  // Override your section opening/closing functions:
+  function showabout() {
+    document.getElementById("about_container").style.display = "block";
+    hideAudioControls();
+  }
+  function closeabout() {
+    document.getElementById("about_container").style.display = "none";
+    showAudioControls();
+  }
+
+  function showwork() {
+    document.getElementById("work_container").style.display = "block";
+    hideAudioControls();
+  }
+  function closework() {
+    document.getElementById("work_container").style.display = "none";
+    showAudioControls();
+  }
+
+  function showprojects() {
+    document.getElementById("projects_container").style.display = "block";
+    hideAudioControls();
+  }
+  function closeprojects() {
+    document.getElementById("projects_container").style.display = "none";
+    showAudioControls();
+  }
+
+  function showcontact() {
+    document.getElementById("contact_container").style.display = "block";
+    hideAudioControls();
+  }
+  function closecontact() {
+    document.getElementById("contact_container").style.display = "none";
+    showAudioControls();
+  }
 
 </script>
 
