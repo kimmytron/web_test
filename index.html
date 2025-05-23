@@ -157,8 +157,8 @@ Now, after 20+ seasons, I’m still competing at the highest level. I’ve becom
   Your browser does not support the audio element.
 </audio>
 
-<!-- Music Controls: Play/Pause + Volume Slider -->
-<div style="position: fixed; bottom: 100px; left: 20px; z-index: 9999; color: white;">
+<!-- Audio Controls: Bottom Left -->
+<div style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; color: white;">
   <!-- Play/Pause Button -->
   <button onclick="toggleAudio()" style="padding: 10px 15px; background: #EB0E0E; color: white; border: none; border-radius: 5px; cursor: pointer;">
     Play/Pause King's Music
@@ -167,20 +167,20 @@ Now, after 20+ seasons, I’m still competing at the highest level. I’ve becom
   <!-- Volume Slider Below -->
   <div style="margin-top: 10px;">
     <label for="volumeControl">Volume</label><br />
-    <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" />
-    <span id="volumeValue">0.5</span>
+    <input type="range" id="volumeControl" min="0" max="100" step="1" value="50" />
+    <span id="volumeValue">50</span>
   </div>
 </div>
-                
+
+<audio id="bgAudio" loop>
+  <source src="assets/my-song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
 <script>
   const audio = document.getElementById('bgAudio');
-
-  // Allow autoplay after user interaction
-  document.addEventListener('click', () => {
-    if (audio.paused) {
-      audio.play().catch(() => {});
-    }
-  }, { once: true });
+  const volumeControl = document.getElementById('volumeControl');
+  const volumeValue = document.getElementById('volumeValue');
 
   function toggleAudio() {
     if (audio.paused) {
@@ -189,10 +189,33 @@ Now, after 20+ seasons, I’m still competing at the highest level. I’ve becom
       audio.pause();
     }
   }
-    volumeControl.addEventListener('input', function () {
-      audio.volume = parseFloat(this.value);
-      volumeValue.textContent = this.value;
-    });
+
+  volumeControl.addEventListener('input', function () {
+    const value = parseInt(this.value, 10);
+    audio.volume = value / 100;
+    volumeValue.textContent = value;
+  });
+
+  document.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play().catch(() => {});
+    }
+  }, { once: true });
+
+
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+   volumeControl.addEventListener('input', function () {
+  const value = parseInt(this.value, 10);
+  audio.volume = value / 100;
+  volumeValue.textContent = value;
+});
+
 </script>
 
 </body>
