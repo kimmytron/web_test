@@ -178,14 +178,14 @@ Now, after 20+ seasons, I’m still competing at the highest level. I’ve becom
 </audio>
 
 <script>
-  const audio = document.getElementById('bgAudio');
+ const audio = document.getElementById('bgAudio');
   const volumeControl = document.getElementById('volumeControl');
   const volumeValue = document.getElementById('volumeValue');
   const audioControls = document.getElementById('audioControls');
 
   function toggleAudio() {
     if (audio.paused) {
-      audio.play();
+      audio.play().catch((e) => console.error("Audio play failed:", e));
     } else {
       audio.pause();
     }
@@ -203,17 +203,14 @@ Now, after 20+ seasons, I’m still competing at the highest level. I’ve becom
     }
   }, { once: true });
 
-  // Utility to hide audio controls
   function hideAudioControls() {
     audioControls.style.display = 'none';
   }
 
-  // Utility to show audio controls
   function showAudioControls() {
     audioControls.style.display = 'block';
   }
 
-  // Override your section opening/closing functions:
   function showabout() {
     document.getElementById("about_container").style.display = "block";
     hideAudioControls();
