@@ -194,6 +194,10 @@ Now, after 20+ seasons, I’m still competing at the highest level. I’ve becom
       audio.pause();
     }
   }
+    volumeControl.addEventListener('input', function () {
+      audio.volume = parseFloat(this.value);
+      volumeValue.textContent = this.value;
+    });
 </script>
 
 </body>
