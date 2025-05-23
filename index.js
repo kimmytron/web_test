@@ -82,3 +82,14 @@ setTimeout(function(){
       $("#work").removeClass("animated fadeIn");
     },1000);
 },1500);
+
+// Volume control setup
+const audio = document.getElementById('bgAudio');
+const volumeControl = document.getElementById('volumeControl');
+
+if (audio && volumeControl) {
+  volumeControl.addEventListener('input', function() {
+    audio.volume = this.value;
+  });
+}
+
