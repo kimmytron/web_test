@@ -15,10 +15,18 @@
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
   <link rel="stylesheet" href="index.css" />
   <style>
-      #about_container {
-      background-color: #FDB927;
-      padding: 20px;
-      border-radius: 10px;
+     #about_container {
+  background-color: #FDB927;
+  padding: 40px;
+  border-radius: 0; /* optional: remove rounding for full coverage */
+  position: fixed;  /* fix it on screen */
+  top: 0;
+  left: 0;
+  width: 100vw;     /* full viewport width */
+  height: 100vh;    /* full viewport height */
+  overflow-y: auto; /* scroll if content is tall */
+  box-sizing: border-box; /* include padding in size */
+  z-index: 9999;    /* ensure it’s on top */
     }
     .highlights-layout {
       display: flex;
