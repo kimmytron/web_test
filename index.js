@@ -1,8 +1,17 @@
+function hideAudioControls() {
+    $("#audioControls").hide();
+}
+
+function showAudioControls() {
+    $("#audioControls").show();
+}
+
 function showprojects(){
     const el = $("#projects_container");
     el.removeClass("animated slideInDown slideOutUp").css("display", "block");
     void el[0].offsetWidth;
     el.addClass("animated slideInDown");
+    hideAudioControls();
     setTimeout(() => {
         el.removeClass("animated slideInDown");
     }, 800);
@@ -15,6 +24,7 @@ function closeprojects(){
     setTimeout(() => {
         el.removeClass("animated slideOutUp");
         el.css("display", "none");
+        showAudioControls();
     }, 800);
 }
 
@@ -23,6 +33,7 @@ function showabout(){
     el.removeClass("animated slideInLeft slideOutLeft").css("display", "block");
     void el[0].offsetWidth;
     el.addClass("animated slideInLeft");
+    hideAudioControls();
     setTimeout(() => {
         el.removeClass("animated slideInLeft");
     }, 800);
@@ -35,6 +46,7 @@ function closeabout(){
     setTimeout(() => {
         el.removeClass("animated slideOutLeft");
         el.css("display", "none");
+        showAudioControls();
     }, 800);
 }
 
@@ -43,6 +55,7 @@ function showwork(){
     el.removeClass("animated slideInRight slideOutRight").css("display", "block");
     void el[0].offsetWidth;
     el.addClass("animated slideInRight");
+    hideAudioControls();
     setTimeout(() => {
         el.removeClass("animated slideInRight");
     }, 800);
@@ -55,6 +68,7 @@ function closework(){
     setTimeout(() => {
         el.removeClass("animated slideOutRight");
         el.css("display", "none");
+        showAudioControls();
     }, 800);
 }
 
@@ -63,6 +77,7 @@ function showcontact(){
     el.removeClass("animated slideInUp slideOutDown").css("display", "block");
     void el[0].offsetWidth;
     el.addClass("animated slideInUp");
+    hideAudioControls();
     setTimeout(() => {
         el.removeClass("animated slideInUp");
     }, 800);
@@ -75,6 +90,7 @@ function closecontact(){
     setTimeout(() => {
         el.removeClass("animated slideOutDown");
         el.css("display", "none");
+        showAudioControls();
     }, 800);
 }
 
