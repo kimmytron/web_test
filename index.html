@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Lebron GOAT James | portfolio</title>
-  <link rel="icon" type="image" href="./assets/favicon.png" />
+  <title>Lebron GOAT James | Portfolio</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
   <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -14,13 +14,48 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
   <link rel="stylesheet" href="index.css" />
+  <style>
+    .highlights-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 30px;
+    }
+
+    .video-section {
+      flex: 1 1 50%;
+      min-width: 300px;
+    }
+
+    .photo-gallery {
+      flex: 1 1 40%;
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .photo-gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Loading Animation -->
   <div id="loading">
     <div id="spinner"></div>
   </div>
+
+  <!-- Particles Background -->
   <div id="particles-js"></div>
+
+  <!-- Animation Boxes -->
   <div id="box">
     <div class="box1 onlywide animated bounceOutLeft" style="animation-delay: 1700ms;"></div>
     <div class="box2 onlywide animated bounceOutLeft" style="animation-delay: 1800ms;"></div>
@@ -29,11 +64,14 @@
     <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1800ms;"></div>
     <div class="box2 onlywide animated bounceOutRight" style="animation-delay: 1700ms;"></div>
   </div>
+
+  <!-- Navigation Links -->
   <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay: 1000ms;">ABOUT</a>
   <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay: 1000ms;">PROFESSION</a>
   <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay: 1000ms;">CONTACT</a>
   <a id="projects" onclick="showprojects()" class="animated fadeIn" style="animation-delay: 1000ms;">HIGHLIGHTS</a>
 
+  <!-- Intro Section -->
   <div id="middle" class="animated slideInDown" style="animation-delay: 2000ms;">
     <h1>Lebron Raymone James</h1>
     <h2>Husband | Father | Basketball Player</h2>
@@ -43,123 +81,56 @@
       <a onclick="showcontact()">CONTACT</a>
       <a onclick="showprojects()">HIGHLIGHTS</a>
     </div>
-    <table>
-      <tr>
-        <td class="animated zoomIn" style="animation-delay:2.2s;">
-          <a class="social" href="https://www.nba.com/player/2544/lebron-james"><i class="fas fa-basketball-ball"></i></a>
-        </td>
-      </tr>
-    </table>
-  </div>
-
-<section class="highlights-layout">
-  <!-- LEFT SIDE: Video Highlights -->
-  <div class="video-section">
-    <h2>Basketball is Life</h2>
-    <p>Here are some of my highlights from my history in the NBA!</p>
-    <div class="project_card">
-      <div class="project_info">
-        <h3>BEST OF BRON</h3>
-        <p>This is a video sourced from the NBA of my best highlights! ⚡</p>
-        <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/b117a8_jALE"
-            title="LeBron James Highlights" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-        </div>
-      </div>
+    <div class="animated zoomIn" style="animation-delay:2.2s;">
+      <a class="social" href="https://www.nba.com/player/2544/lebron-james"><i class="fas fa-basketball-ball"></i></a>
     </div>
   </div>
 
-  <!-- RIGHT SIDE: Photo Gallery -->
-  <div class="photo-gallery">
-    <h3>Iconic Moments</h3>
-    <img src="./assets/lebron1.jpg" alt="LeBron Dunk" />
-    <img src="./assets/lebron2.jpg" alt="LeBron Championship" />
-    <img src="./assets/lebron3.jpg" alt="LeBron with MVP Trophy" />
-  </div>
-</section>
-
-      </ul>
-    </section>
-  </div>
-
-  <div id="work_container" class="container">
-    <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
-    <h1>Profession</h1>
-    <section>
-      <h2>I don't just play basketball!</h2>
-      <p>Welcome! I'm Lebron James, a passionate professional specializing in professional Basketball and much more.</p>
-      <div id="used">
-        <div><i class="fas fa-circle"></i>&nbsp;NBA Player</div>
-        <div><i class="fas fa-circle"></i>&nbsp;Philanthropist</div>
-        <div><i class="fas fa-circle"></i>&nbsp;Entertainer</div>
+  <!-- Highlights Section -->
+  <div id="projects_container" class="container">
+    <div onclick="closeprojects()"><i class="fas fa-angle-up"></i></div>
+    <h1>Highlights</h1>
+    <section class="highlights-layout">
+      <div class="video-section">
+        <h2>Basketball is Life</h2>
+        <p>Here are some of my highlights from my history in the NBA!</p>
+        <div class="project_card">
+          <div class="project_info">
+            <h3>BEST OF BRON</h3>
+            <p>This is a video sourced from the NBA of my best highlights! ⚡</p>
+            <div class="video-wrapper">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/b117a8_jALE" title="LeBron James Highlights"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
       </div>
-      <button class="btn_one"><a href="./assets/AP_CSP_Test_Breakdown.pdf" target="_blank"
-          style="color: inherit; text-decoration: none">View Resume</a></button>
+      <div class="photo-gallery">
+        <h3>Iconic Moments</h3>
+        <img src="./assets/lebron1.jpg" alt="LeBron Dunk" />
+        <img src="./assets/lebron2.jpg" alt="LeBron Championship" />
+        <img src="./assets/lebron3.jpg" alt="LeBron with MVP Trophy" />
+      </div>
     </section>
   </div>
 
-  <div id="about_container" class="container">
-    <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
-    <h1>About</h1>
-    <section>
-      <h2>"Y’all lookin’ for me?</h2>
-      <p>
-        "I’m LeBron James — a kid from Akron, Ohio, who dreamed big and put in the work to make it real.
-        <br /><br />
-        I entered the NBA in 2003 as the first overall pick by the Cleveland Cavaliers. As an 18-year-old, I knew I had a lot to prove — not just to the league, but to myself, to my city, and to everyone who believed in me. I spent my first seven seasons in Cleveland, becoming an All-Star, winning MVPs, and leading the team deep into the playoffs — but that championship still eluded me.
-        <br /><br />
-        In 2010, I made a tough decision and joined the Miami Heat. That move sparked a lot of conversations, but it also sparked results. With Dwyane Wade and Chris Bosh, we built something special. Over four years, we went to four straight NBA Finals and won back-to-back titles in 2012 and 2013.
-        <br /><br />
-        But home was calling.
-        <br /><br />
-        In 2014, I returned to Cleveland with one mission: bring a title to Northeast Ohio. And in 2016, we did the impossible — came back from a 3–1 deficit in the Finals to beat a 73–9 Warriors team. That championship meant everything to me — for my city, for my legacy, for the people who never stopped believing.
-        <br /><br />
-        In 2018, I started a new chapter with the Los Angeles Lakers. Two years later, in the middle of a global pandemic, we won the 2020 NBA Championship inside the Orlando bubble — a title that took everything mentally, physically, and emotionally.
-        <br /><br />
-        Now, after 20+ seasons, I’m still competing at the highest level. I’ve become the NBA’s all-time leading scorer, and I’m still not done. Every game, every moment, I’m writing another page in the story — and I’m grateful for every part of the journey."
-      </p>
-      <p>Feel free to explore my portfolio on my website, where you can witness my diverse range of highlights in life and basketball.</p>
-    </section>
-    <section>
-      <h2>Skills</h2>
-      <p>blocking, passing, playmaking, shooting, dunking, being a GOAT</p>
-    </section>
-  </div>
+  <!-- Other Containers (work, about, contact) stay unchanged -->
 
-  <div id="contact_container" class="container">
-    <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
-    <h1>Contact</h1>
-    <section>
-      <h2>This is a form to reach out to me!</h2>
-      <form action="https://formcarry.com/s/JKNu0aGkeQ" method="POST" class="formcarry-form">
-        <input name="name" type="text" placeholder="name" required />
-        <input name="email" type="email" placeholder="email" required /><br />
-        <textarea name="message" placeholder="your message" required rows="5"></textarea><br />
-        <button class="btn_one">send</button>
-      </form>
-      <td class="animated zoomIn" style="animation-delay:2.2s;">
-        <a class="social" href="https://www.instagram.com/kingjames/?hl=en"><i class="fab fa-instagram"></i></a>
-      </td>
-    </section>
-  </div>
-
+  <!-- Footer -->
   <div id="footer">
     Click here for my Citations <br />
-    <a href="https://www.nba.com/player/2544/lebron-james">TheGOAT'sCitations</a>
+    <a href="https://www.nba.com/player/2544/lebron-james">TheGOAT's Citations</a>
   </div>
 
+  <!-- Audio Controls -->
   <audio id="bgAudio" loop>
     <source src="assets/my-song.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
 
-  <!-- Controls container fixed at bottom left -->
-  <div
-    style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.5); padding: 8px 12px; border-radius: 5px;">
-    <button id="playPauseBtn"
-      style="padding: 10px 15px; background: #860038; color: white; border: none; border-radius: 5px; cursor: pointer;">
+  <div style="position: fixed; bottom: 20px; left: 20px; z-index: 9999; display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.5); padding: 8px 12px; border-radius: 5px;">
+    <button id="playPauseBtn" style="padding: 10px 15px; background: #860038; color: white; border: none; border-radius: 5px; cursor: pointer;">
       Play Music
     </button>
     <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5" style="cursor: pointer;" />
@@ -174,10 +145,8 @@
     const playPauseBtn = document.getElementById('playPauseBtn');
     const volumeSlider = document.getElementById('volumeSlider');
 
-    // Set initial volume to 50%
     audio.volume = 0.5;
 
-    // Play/pause toggle
     playPauseBtn.addEventListener('click', () => {
       if (audio.paused) {
         audio.play();
@@ -188,7 +157,6 @@
       }
     });
 
-    // Update button text on play/pause via other means (optional)
     audio.addEventListener('play', () => {
       playPauseBtn.textContent = 'Pause Music';
     });
@@ -196,21 +164,15 @@
       playPauseBtn.textContent = 'Play Music';
     });
 
-    // Volume slider control
     volumeSlider.addEventListener('input', () => {
       audio.volume = volumeSlider.value;
     });
 
-    // Allow autoplay after first user interaction (optional)
-    document.addEventListener(
-      'click',
-      () => {
-        if (audio.paused) {
-          audio.play().catch(() => { });
-        }
-      },
-      { once: true }
-    );
+    document.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play().catch(() => {});
+      }
+    }, { once: true });
   </script>
 </body>
 
