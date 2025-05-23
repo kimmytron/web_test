@@ -383,4 +383,31 @@ body {
     #box div {
         width:100%;
     }
+	.highlights-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.video-section {
+  flex: 1 1 50%;
+  min-width: 300px;
+}
+
+.photo-gallery {
+  flex: 1 1 40%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.photo-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
 }
