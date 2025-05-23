@@ -1,5 +1,5 @@
 function showprojects(){
-    $("#projects_container").css("display","inherit");
+    $("#projects_container").css("display","block");
     $("#projects_container").removeClass("animated slideInDown");
     void $("#projects_container")[0].offsetWidth;
     $("#projects_container").addClass("animated slideInDown");
@@ -7,7 +7,6 @@ function showprojects(){
         $("#projects_container").removeClass("animated slideInDown");
     },800);
 }
-
 function closeprojects(){
     $("#projects_container").addClass("animated slideOutUp");
     setTimeout(function(){
@@ -15,9 +14,8 @@ function closeprojects(){
         $("#projects_container").css("display","none");
     },800);
 }
-
 function showabout(){
-    $("#about_container").css("display","inherit");
+    $("#about_container").css("display","block");
     $("#about_container").removeClass("animated slideInLeft");
     void $("#about_container")[0].offsetWidth;
     $("#about_container").addClass("animated slideInLeft");
@@ -25,7 +23,6 @@ function showabout(){
         $("#about_container").removeClass("animated slideInLeft");
     },800);
 }
-
 function closeabout(){
     $("#about_container").addClass("animated slideOutLeft");
     setTimeout(function(){
@@ -33,9 +30,8 @@ function closeabout(){
         $("#about_container").css("display","none");
     },800);
 }
-
 function showwork(){
-    $("#work_container").css("display","inherit");
+    $("#work_container").css("display","block");
     $("#work_container").removeClass("animated slideInRight");
     void $("#work_container")[0].offsetWidth;
     $("#work_container").addClass("animated slideInRight");
@@ -43,7 +39,6 @@ function showwork(){
         $("#work_container").removeClass("animated slideInRight");
     },800);
 }
-
 function closework(){
     $("#work_container").addClass("animated slideOutRight");
     setTimeout(function(){
@@ -51,9 +46,8 @@ function closework(){
         $("#work_container").css("display","none");
     },800);
 }
-
 function showcontact(){
-    $("#contact_container").css("display","inherit");
+    $("#contact_container").css("display","block");
     $("#contact_container").removeClass("animated slideInUp");
     void $("#contact_container")[0].offsetWidth;
     $("#contact_container").addClass("animated slideInUp");
@@ -61,7 +55,6 @@ function showcontact(){
         $("#contact_container").removeClass("animated slideInUp");
     },800);
 }
-
 function closecontact(){
     $("#contact_container").addClass("animated slideOutDown");
     setTimeout(function(){
